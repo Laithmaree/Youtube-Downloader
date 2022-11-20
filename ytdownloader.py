@@ -1,0 +1,21 @@
+import pytube
+import time
+print('Hello what woukd you like to download?')
+link = input("Insert link here: ")
+print("Finding link...")
+time.sleep(2)
+yt = pytube.YouTube(link)
+print("Found link getting high resolution :) ...")
+ys = yt.streams.get_highest_resolution()
+print("downloading it now...")
+locaition = input("Which directory you want to download it: ")
+print("Finding directory...")
+time.sleep(3)
+print("Finding directory..")
+time.sleep(2)
+print("Finding directory.")
+time.sleep(1)
+print("Found. Downloading now")
+ys.download(locaition)
+print("Downloaded")
+    
